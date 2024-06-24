@@ -52,25 +52,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clsQuestion.cs" />
-    <Compile Include="ctrlQuiz.cs">
+    <Compile Include="Classes\clsQuestion.cs" />
+    <Compile Include="Controls\ctrlQuiz.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrlQuiz.Designer.cs">
+    <Compile Include="Controls\ctrlQuiz.Designer.cs">
       <DependentUpon>ctrlQuiz.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ctrlQuiz.resx">
+    <EmbeddedResource Include="Controls\ctrlQuiz.resx">
       <DependentUpon>ctrlQuiz.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
