@@ -1,0 +1,13 @@
+G:\ProblemSolving\Quizes System\bin\Debug\Quizes System.exe.config
+G:\ProblemSolving\Quizes System\bin\Debug\Quizes System.exe
+G:\ProblemSolving\Quizes System\bin\Debug\Quizes System.pdb
+G:\ProblemSolving\Quizes System\bin\Debug\Guna.UI2.dll
+G:\ProblemSolving\Quizes System\obj\Debug\Quizes System.csproj.AssemblyReference.cache
+G:\ProblemSolving\Quizes System\obj\Debug\Quizes_System.ctrlQuiz.resources
+G:\ProblemSolving\Quizes System\obj\Debug\Quizes_System.Properties.Resources.resources
+G:\ProblemSolving\Quizes System\obj\Debug\Quizes System.csproj.GenerateResource.cache
+G:\ProblemSolving\Quizes System\obj\Debug\Quizes System.csproj.CoreCompileInputs.cache
+G:\ProblemSolving\Quizes System\obj\Debug\Quizes S.F8B83ED1.Up2Date
+G:\ProblemSolving\Quizes System\obj\Debug\Quizes System.exe
+G:\ProblemSolving\Quizes System\obj\Debug\Quizes System.pdb
+G:\ProblemSolving\Quizes System\obj\Debug\Quizes_System.Form1.resources
