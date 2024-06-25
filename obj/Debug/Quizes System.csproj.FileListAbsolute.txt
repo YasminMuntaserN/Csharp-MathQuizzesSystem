@@ -11,3 +11,4 @@ G:\ProblemSolving\Quizes System\obj\Debug\Quizes S.F8B83ED1.Up2Date
 G:\ProblemSolving\Quizes System\obj\Debug\Quizes System.exe
 G:\ProblemSolving\Quizes System\obj\Debug\Quizes System.pdb
 G:\ProblemSolving\Quizes System\obj\Debug\Quizes_System.Form1.resources
+G:\ProblemSolving\Quizes System\bin\Debug\Guna.UI.dll

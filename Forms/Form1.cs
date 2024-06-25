@@ -32,5 +32,16 @@ namespace Quizes_System
             ctrlQuiz6.LoadQuestion(clsQuestion.enQuestionLevel.Mix, clsQuestion.enOperationTypeType.mix,
             6);
         }
+
+        private void btnFinishQuiz_Click(object sender, EventArgs e)
+        {
+            ctrlQuiz1.checkRightAnswer();
+            ctrlQuiz2.checkRightAnswer();
+            ctrlQuiz3.checkRightAnswer();
+            ctrlQuiz4.checkRightAnswer();
+            ctrlQuiz5.checkRightAnswer();
+            ctrlQuiz6.checkRightAnswer();
+
+        }
     }
 }
