@@ -32,13 +32,11 @@ namespace Quizes_System
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.lblNum1 = new System.Windows.Forms.Label();
             this.lblNum2 = new System.Windows.Forms.Label();
             this.lblOperation = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblQuestionNumber = new System.Windows.Forms.Label();
-            this.guna2ColorTransition1 = new Guna.UI2.WinForms.Guna2ColorTransition(this.components);
             this.gbOptions = new System.Windows.Forms.GroupBox();
             this.pOption4 = new Guna.UI2.WinForms.Guna2Panel();
             this.rbOption4 = new System.Windows.Forms.RadioButton();
@@ -67,27 +65,27 @@ namespace Quizes_System
             // 
             this.lblNum1.AutoSize = true;
             this.lblNum1.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
-            this.lblNum1.Location = new System.Drawing.Point(50, 42);
+            this.lblNum1.Location = new System.Drawing.Point(34, 42);
             this.lblNum1.Name = "lblNum1";
-            this.lblNum1.Size = new System.Drawing.Size(28, 37);
+            this.lblNum1.Size = new System.Drawing.Size(62, 37);
             this.lblNum1.TabIndex = 0;
-            this.lblNum1.Text = "1";
+            this.lblNum1.Text = "500";
             // 
             // lblNum2
             // 
             this.lblNum2.AutoSize = true;
             this.lblNum2.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
-            this.lblNum2.Location = new System.Drawing.Point(145, 42);
+            this.lblNum2.Location = new System.Drawing.Point(117, 42);
             this.lblNum2.Name = "lblNum2";
-            this.lblNum2.Size = new System.Drawing.Size(32, 37);
+            this.lblNum2.Size = new System.Drawing.Size(61, 37);
             this.lblNum2.TabIndex = 1;
-            this.lblNum2.Text = "2";
+            this.lblNum2.Text = "700";
             // 
             // lblOperation
             // 
             this.lblOperation.AutoSize = true;
             this.lblOperation.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
-            this.lblOperation.Location = new System.Drawing.Point(103, 42);
+            this.lblOperation.Location = new System.Drawing.Point(84, 42);
             this.lblOperation.Name = "lblOperation";
             this.lblOperation.Size = new System.Drawing.Size(36, 37);
             this.lblOperation.TabIndex = 2;
@@ -97,7 +95,7 @@ namespace Quizes_System
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(172, 42);
+            this.label1.Location = new System.Drawing.Point(173, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 37);
             this.label1.TabIndex = 3;
@@ -114,13 +112,6 @@ namespace Quizes_System
             this.lblQuestionNumber.Size = new System.Drawing.Size(63, 37);
             this.lblQuestionNumber.TabIndex = 4;
             this.lblQuestionNumber.Text = "Q12";
-            // 
-            // guna2ColorTransition1
-            // 
-            this.guna2ColorTransition1.ColorArray = new System.Drawing.Color[] {
-        System.Drawing.Color.Red,
-        System.Drawing.Color.Blue,
-        System.Drawing.Color.Orange};
             // 
             // gbOptions
             // 
@@ -336,7 +327,6 @@ namespace Quizes_System
         private System.Windows.Forms.Label lblOperation;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblQuestionNumber;
-        private Guna.UI2.WinForms.Guna2ColorTransition guna2ColorTransition1;
         private GroupBox gbOptions;
         private Guna.UI2.WinForms.Guna2Panel pOption4;
         private RadioButton rbOption4;

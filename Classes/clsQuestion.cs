@@ -16,15 +16,16 @@ namespace Quizes_System
         public enum enResult { right = 1, wrong = 2 };
         public int Num1 { set; get; }
         public int Num2 { set; get; }
-        public int RightAnswer { set; get; }
+        public double RightAnswer { set; get; }
 
         public enResult result;
         public enOperationType OperationType;
         public enQuestionLevel QuestionLevel;
 
-        private static  Random _Random = new Random();
 
-        public clsQuestion(int num1, int num2,  enQuestionLevel QuestionLevel, enOperationType OperationType)
+        private static Random _Random = new Random();
+
+        public clsQuestion(int num1, int num2, enQuestionLevel QuestionLevel, enOperationType OperationType)
         {
             this.Num1 = num1;
             this.Num2 = num2;
@@ -32,8 +33,8 @@ namespace Quizes_System
             this.OperationType = OperationType;
             this.RightAnswer = CalculateAnswer();
         }
-     
-        private int CalculateAnswer()
+
+        private double CalculateAnswer()
         {
             switch (OperationType)
             {
@@ -47,7 +48,7 @@ namespace Quizes_System
                     return (Num1 * Num2);
 
                 case enOperationType.Div:
-                    return Num2 != 0 ? Num1 / Num2 : 0;
+                    return Num2 != 0 ? Math.Round(((double)Num1 / Num2) ,2) : 0;
             }
             return 0;
         }
@@ -57,11 +58,11 @@ namespace Quizes_System
         private static clsQuestion GenerateEachQuestion(int From, int To, enQuestionLevel QuestionLevel, enOperationType OperationType)
         {
             int Number1 = _Random.Next(From, To);
-            int Number2 = _Random.Next(From, From);
+            int Number2 = _Random.Next(From, To);
             return new clsQuestion(Number1, Number2, QuestionLevel, OperationType);
         }
 
-        public static  clsQuestion GenerateQuestion(enQuestionLevel QuestionLevel, enOperationType OperationType)
+        public static clsQuestion GenerateQuestion(enQuestionLevel QuestionLevel, enOperationType OperationType)
         {
 
             if (OperationType == enOperationType.mix)
@@ -77,10 +78,10 @@ namespace Quizes_System
                     return GenerateEachQuestion(10, 100, QuestionLevel, OperationType);
 
                 case enQuestionLevel.Hard:
-                    return GenerateEachQuestion(10, 500, QuestionLevel, OperationType);
+                    return GenerateEachQuestion(100, 200, QuestionLevel, OperationType);
 
                 case enQuestionLevel.Mix:
-                    return GenerateEachQuestion(1, 500, QuestionLevel, OperationType);
+                    return GenerateEachQuestion(200, 500, QuestionLevel, OperationType);
             }
             return null;
         }
@@ -102,22 +103,60 @@ namespace Quizes_System
                     return '/';
             }
             return '+';
+
         }
 
-        public static List<int> GenerateOptions(int RightAnswer)
+        public static enOperationType GetOperationType(string Name)
+        {
+            switch (Name)
+            {
+                case "Addition":
+                    return enOperationType.Add;
+
+                case "Subtraction":
+                    return enOperationType.Sub;
+
+                case "Multiplication":
+                    return enOperationType.Mul;
+
+                case "Division":
+                    return enOperationType.Div;
+            }
+            return enOperationType.mix;
+        }
+
+        public static enQuestionLevel GetLevel(string Name)
+        {
+            switch (Name)
+            {
+                case "Easy":
+                    return enQuestionLevel.Easy;
+
+                case "Medium":
+                    return enQuestionLevel.Med;
+
+                case "Hard":
+                    return enQuestionLevel.Hard;
+            }
+            return enQuestionLevel.Mix;
+        }
+
+        public static List<double> GenerateOptions(double RightAnswer)
         {
             // Here we use HashSet because we want to prevent creating two similar options
-            var options = new HashSet<int> { RightAnswer };
+            var options = new HashSet<double> { RightAnswer };
 
             while (options.Count < 4)
             {
-                options.Add(_Random.Next(RightAnswer - 10, RightAnswer + 10));
+                options.Add(_Random.Next(((int)RightAnswer - 10) , (int)(RightAnswer + 10)));
             }
-            options.Add(RightAnswer);
+            options.Add(Math.Round((RightAnswer),2));
 
             return options.OrderBy(x => _Random.Next()).ToList();
         }
 
+
+
     }
-      
+
 }

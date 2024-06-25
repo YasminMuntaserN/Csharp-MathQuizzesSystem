@@ -21,6 +21,9 @@ namespace Quizes_System.Forms
 
         private int _NumberOfQuestions;
 
+        private bool _timerFinished = false;
+
+        public  int NumberOfCorrectAnswers = 0;
 
         public frmStartQuiz(int numberOfQuestions, clsQuestion.enQuestionLevel Level, clsQuestion.enOperationType operationType, int Time)
         {
@@ -56,7 +59,7 @@ namespace Quizes_System.Forms
 
         private void ResultMessageBox(int RightAnswer)
         {
-            if (RightAnswer >= _GameInfo.NumberOfQuestions)
+            if (RightAnswer > _GameInfo.NumberOfQuestions/2)
             {
                 MessageBox.Show($"Great! You got {RightAnswer} / {_GameInfo.NumberOfQuestions} , Well done !", "Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -71,15 +74,20 @@ namespace Quizes_System.Forms
 
             foreach (var kvp in Questions)
             {
-                kvp.Key.checkRightAnswer();
+                if( kvp.Key.checkRightAnswer()) NumberOfCorrectAnswers++;
             }
-            lblScoure.Text = ctrlQuiz.Source.ToString();
+            lblScoure.Text =NumberOfCorrectAnswers.ToString();
 
-            ResultMessageBox(ctrlQuiz.Source);
+            ResultMessageBox(NumberOfCorrectAnswers);
 
         }
 
-        private void btnFinishQuiz_Click(object sender, EventArgs e) => FinishQuiz();
+        private void btnFinishQuiz_Click(object sender, EventArgs e)
+        {
+            quizTimer.Stop();
+            _timerFinished = true;
+            FinishQuiz();
+        }
 
         private void frmStartQuiz_Load(object sender, EventArgs e)
         {
@@ -114,9 +122,28 @@ namespace Quizes_System.Forms
             else
             {
                 quizTimer.Stop();
-
+                _timerFinished = true;
                 MessageBox.Show("Time's up!");
                 FinishQuiz();
+            }
+        }
+
+        private void btnReturnMaiMenu_Click(object sender, EventArgs e)
+        {
+            if(btnFinishQuiz.Checked ||_timerFinished)
+            {
+                frmMainMenu frmMainMenu = new frmMainMenu();
+                frmMainMenu.Show();
+                this.Hide();
+                return;
+            }
+            if (MessageBox.Show("Are you sure you want to exit the quiz? Your answers will be lost.",
+                "Confirm Exit", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            {
+                quizTimer.Stop();
+                frmMainMenu frmMainMenu = new frmMainMenu();
+                frmMainMenu.Show();
+                this.Hide();
             }
         }
     }

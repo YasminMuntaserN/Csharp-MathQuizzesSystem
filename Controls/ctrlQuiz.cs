@@ -16,11 +16,8 @@ namespace Quizes_System
 {
     public partial class ctrlQuiz : UserControl
     {
-        private clsQuestion _QuestionInfo;
+        public clsQuestion _QuestionInfo;
 
-        private static int _Source;
-
-        public static int Source => _Source;
 
         public ctrlQuiz()
         {
@@ -29,7 +26,7 @@ namespace Quizes_System
 
         private void _FillOptionsInRadioButtons()
         {
-            List<int> options = clsQuestion.GenerateOptions(_QuestionInfo.RightAnswer);
+            List<double> options = clsQuestion.GenerateOptions(_QuestionInfo.RightAnswer);
 
             if (options.Count >= 4)
             {
@@ -96,18 +93,20 @@ namespace Quizes_System
             return (CorrectOption != null) ? Convert.ToByte(CorrectOption.Tag) : (byte)0;
         }
 
-        public void checkRightAnswer()
+        public bool checkRightAnswer()
         {
+            bool RightAnswer = false;
             // here we get the first Option That Selected
             var selectedOption = new[] { rbOption1, rbOption2, rbOption3, rbOption4 }
                 .FirstOrDefault(rb => rb.Checked);
 
+            double choice =  0;
 
-            if (selectedOption != null && int.TryParse(selectedOption.Text, out int selectedAnswer))
+            if (selectedOption != null && Double.TryParse(selectedOption.Text, out choice))
             {
-                if (selectedAnswer == _QuestionInfo.RightAnswer)
+                if (choice == _QuestionInfo.RightAnswer)
                 {
-                    _Source++;
+                    RightAnswer = true;
                     _QuestionInfo.result = clsQuestion.enResult.right;
 
                 }
@@ -122,6 +121,7 @@ namespace Quizes_System
             {
                 AnswerEffects(GetRightOptionTag(), enResult.right, false);
             }
+            return RightAnswer;
         }
 
         private void _PreventCheckedMultipleChoice()

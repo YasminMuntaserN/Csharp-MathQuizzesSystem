@@ -17,7 +17,7 @@ namespace Quizes_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmStartQuiz(100, clsQuestion.enQuestionLevel.Mix, clsQuestion.enOperationType.mix,10));
+            Application.Run(new frmMainMenu());
         }
     }
 }

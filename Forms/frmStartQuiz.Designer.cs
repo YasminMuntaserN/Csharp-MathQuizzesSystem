@@ -151,6 +151,7 @@
             this.btnReturnMaiMenu.Size = new System.Drawing.Size(274, 51);
             this.btnReturnMaiMenu.TabIndex = 341;
             this.btnReturnMaiMenu.Text = "Return to Main Menu";
+            this.btnReturnMaiMenu.Click += new System.EventHandler(this.btnReturnMaiMenu_Click);
             // 
             // frmStartQuiz
             // 
