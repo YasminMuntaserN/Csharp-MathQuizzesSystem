@@ -39,6 +39,7 @@
             this.btnFinishQuiz = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnReturnMaiMenu = new Guna.UI2.WinForms.Guna2GradientButton();
             this.quizTimer = new System.Windows.Forms.Timer(this.components);
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -46,7 +47,7 @@
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Comic Sans MS", 30F, System.Drawing.FontStyle.Bold);
             this.lblTitle.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblTitle.Location = new System.Drawing.Point(0, -1);
+            this.lblTitle.Location = new System.Drawing.Point(10, -3);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(1413, 69);
             this.lblTitle.TabIndex = 333;
@@ -56,7 +57,7 @@
             // flpQuestions
             // 
             this.flpQuestions.AutoScroll = true;
-            this.flpQuestions.Location = new System.Drawing.Point(45, 144);
+            this.flpQuestions.Location = new System.Drawing.Point(22, 153);
             this.flpQuestions.Name = "flpQuestions";
             this.flpQuestions.Size = new System.Drawing.Size(1368, 514);
             this.flpQuestions.TabIndex = 0;
@@ -65,7 +66,7 @@
             // 
             this.lblTimer.AutoSize = true;
             this.lblTimer.Font = new System.Drawing.Font("Comic Sans MS", 17F, System.Drawing.FontStyle.Bold);
-            this.lblTimer.Location = new System.Drawing.Point(92, 69);
+            this.lblTimer.Location = new System.Drawing.Point(107, 101);
             this.lblTimer.Name = "lblTimer";
             this.lblTimer.Size = new System.Drawing.Size(128, 40);
             this.lblTimer.TabIndex = 335;
@@ -77,7 +78,7 @@
             this.lblScoure.BackColor = System.Drawing.Color.Transparent;
             this.lblScoure.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold);
             this.lblScoure.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblScoure.Location = new System.Drawing.Point(1108, 58);
+            this.lblScoure.Location = new System.Drawing.Point(1142, 100);
             this.lblScoure.Name = "lblScoure";
             this.lblScoure.Size = new System.Drawing.Size(36, 41);
             this.lblScoure.TabIndex = 337;
@@ -89,7 +90,7 @@
             this.gunaLabel1.BackColor = System.Drawing.Color.Transparent;
             this.gunaLabel1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold);
             this.gunaLabel1.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel1.Location = new System.Drawing.Point(1132, 58);
+            this.gunaLabel1.Location = new System.Drawing.Point(1166, 100);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(59, 41);
             this.gunaLabel1.TabIndex = 338;
@@ -101,7 +102,7 @@
             this.lblNumOfQuestion.BackColor = System.Drawing.Color.Transparent;
             this.lblNumOfQuestion.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold);
             this.lblNumOfQuestion.ForeColor = System.Drawing.Color.Black;
-            this.lblNumOfQuestion.Location = new System.Drawing.Point(1173, 58);
+            this.lblNumOfQuestion.Location = new System.Drawing.Point(1207, 100);
             this.lblNumOfQuestion.Name = "lblNumOfQuestion";
             this.lblNumOfQuestion.Size = new System.Drawing.Size(67, 41);
             this.lblNumOfQuestion.TabIndex = 339;
@@ -113,7 +114,7 @@
             this.gunaLabel2.BackColor = System.Drawing.Color.Transparent;
             this.gunaLabel2.Font = new System.Drawing.Font("Comic Sans MS", 17F, System.Drawing.FontStyle.Bold);
             this.gunaLabel2.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel2.Location = new System.Drawing.Point(898, 59);
+            this.gunaLabel2.Location = new System.Drawing.Point(932, 101);
             this.gunaLabel2.Name = "gunaLabel2";
             this.gunaLabel2.Size = new System.Drawing.Size(204, 40);
             this.gunaLabel2.TabIndex = 334;
@@ -153,11 +154,21 @@
             this.btnReturnMaiMenu.Text = "Return to Main Menu";
             this.btnReturnMaiMenu.Click += new System.EventHandler(this.btnReturnMaiMenu_Click);
             // 
+            // guna2Separator1
+            // 
+            this.guna2Separator1.FillColor = System.Drawing.Color.Black;
+            this.guna2Separator1.FillThickness = 3;
+            this.guna2Separator1.Location = new System.Drawing.Point(35, 66);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(1346, 31);
+            this.guna2Separator1.TabIndex = 342;
+            // 
             // frmStartQuiz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1416, 773);
+            this.Controls.Add(this.guna2Separator1);
             this.Controls.Add(this.btnReturnMaiMenu);
             this.Controls.Add(this.btnFinishQuiz);
             this.Controls.Add(this.gunaLabel2);
@@ -169,6 +180,7 @@
             this.Controls.Add(this.lblTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmStartQuiz";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Start Quiz";
             this.Load += new System.EventHandler(this.frmStartQuiz_Load);
             this.ResumeLayout(false);
@@ -188,5 +200,6 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnFinishQuiz;
         private Guna.UI2.WinForms.Guna2GradientButton btnReturnMaiMenu;
         private System.Windows.Forms.Timer quizTimer;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
     }
 }

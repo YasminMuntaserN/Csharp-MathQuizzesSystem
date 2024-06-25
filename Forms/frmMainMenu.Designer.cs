@@ -110,7 +110,7 @@ namespace Quizes_System
             0,
             0});
             this.numaricNumberOfQuestions.Name = "numaricNumberOfQuestions";
-            this.numaricNumberOfQuestions.Size = new System.Drawing.Size(184, 45);
+            this.numaricNumberOfQuestions.Size = new System.Drawing.Size(198, 45);
             this.numaricNumberOfQuestions.TabIndex = 339;
             this.numaricNumberOfQuestions.Value = new decimal(new int[] {
             1,
@@ -137,7 +137,7 @@ namespace Quizes_System
             "Mixed"});
             this.cbLevel.Location = new System.Drawing.Point(308, 159);
             this.cbLevel.Name = "cbLevel";
-            this.cbLevel.Size = new System.Drawing.Size(184, 36);
+            this.cbLevel.Size = new System.Drawing.Size(198, 36);
             this.cbLevel.StartIndex = 0;
             this.cbLevel.TabIndex = 340;
             // 
@@ -162,7 +162,7 @@ namespace Quizes_System
             "30:00"});
             this.cbTimer.Location = new System.Drawing.Point(308, 296);
             this.cbTimer.Name = "cbTimer";
-            this.cbTimer.Size = new System.Drawing.Size(184, 36);
+            this.cbTimer.Size = new System.Drawing.Size(198, 36);
             this.cbTimer.StartIndex = 0;
             this.cbTimer.TabIndex = 342;
             // 
@@ -186,7 +186,7 @@ namespace Quizes_System
             "Mixed"});
             this.cbOperation.Location = new System.Drawing.Point(308, 233);
             this.cbOperation.Name = "cbOperation";
-            this.cbOperation.Size = new System.Drawing.Size(184, 36);
+            this.cbOperation.Size = new System.Drawing.Size(198, 36);
             this.cbOperation.StartIndex = 0;
             this.cbOperation.TabIndex = 343;
             // 
