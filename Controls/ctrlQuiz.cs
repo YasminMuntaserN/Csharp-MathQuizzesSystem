@@ -18,9 +18,9 @@ namespace Quizes_System
     {
         private clsQuestion _QuestionInfo;
 
-        private int _Source;
+        private static int _Source;
 
-        public int Source => _Source;
+        public static int Source => _Source;
 
         public ctrlQuiz()
         {
@@ -44,8 +44,9 @@ namespace Quizes_System
             rbOption4.Checked = false;
         }
 
-        public void LoadQuestion(clsQuestion.enQuestionLevel questionLevel, clsQuestion.enOperationTypeType operationType, int QuestionNumber)
+        public void LoadQuestion(clsQuestion.enQuestionLevel questionLevel, clsQuestion.enOperationType operationType, int QuestionNumber)
         {
+            _PreventCheckedMultipleChoice();
             _QuestionInfo = clsQuestion.GenerateQuestion(questionLevel, operationType);
             lblNum1.Text = _QuestionInfo.Num1.ToString();
             lblNum2.Text = _QuestionInfo.Num2.ToString();
@@ -117,6 +118,27 @@ namespace Quizes_System
                 }
                 AnswerEffects(Convert.ToByte(selectedOption.Tag), _QuestionInfo.result);
             }
+            else
+            {
+                AnswerEffects(GetRightOptionTag(), enResult.right, false);
+            }
         }
+
+        private void _PreventCheckedMultipleChoice()
+        {
+            var radios = new[] { rbOption1, rbOption2, rbOption3, rbOption4 }.OfType<RadioButton>();
+            foreach (var radio in radios)
+            {
+                radio.AutoCheck = false;
+                radio.Click += (obj, arg) =>
+                {
+                    radio.Checked = true;
+                    foreach (var r in radios)
+                        if (r != radio)
+                            r.Checked = false;
+                };
+            }
+        }
+
     }
 }

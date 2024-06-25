@@ -19,17 +19,17 @@ namespace Quizes_System
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            ctrlQuiz1.LoadQuestion(clsQuestion.enQuestionLevel.Mix, clsQuestion.enOperationTypeType.mix,
+            ctrlQuiz1.LoadQuestion(clsQuestion.enQuestionLevel.Mix, clsQuestion.enOperationType.mix,
                 1);
-            ctrlQuiz2.LoadQuestion(clsQuestion.enQuestionLevel.Mix, clsQuestion.enOperationTypeType.mix,
+            ctrlQuiz2.LoadQuestion(clsQuestion.enQuestionLevel.Mix, clsQuestion.enOperationType.mix,
              2);
-            ctrlQuiz3.LoadQuestion(clsQuestion.enQuestionLevel.Mix, clsQuestion.enOperationTypeType.mix,
+            ctrlQuiz3.LoadQuestion(clsQuestion.enQuestionLevel.Mix, clsQuestion.enOperationType.mix,
              3);
-            ctrlQuiz4.LoadQuestion(clsQuestion.enQuestionLevel.Mix, clsQuestion.enOperationTypeType.mix,
+            ctrlQuiz4.LoadQuestion(clsQuestion.enQuestionLevel.Mix, clsQuestion.enOperationType.mix,
              4);
-            ctrlQuiz5.LoadQuestion(clsQuestion.enQuestionLevel.Mix, clsQuestion.enOperationTypeType.mix,
+            ctrlQuiz5.LoadQuestion(clsQuestion.enQuestionLevel.Mix, clsQuestion.enOperationType.mix,
              5);
-            ctrlQuiz6.LoadQuestion(clsQuestion.enQuestionLevel.Mix, clsQuestion.enOperationTypeType.mix,
+            ctrlQuiz6.LoadQuestion(clsQuestion.enQuestionLevel.Mix, clsQuestion.enOperationType.mix,
             6);
         }
 

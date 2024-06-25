@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Quizes_System.Forms;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace Quizes_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new frmStartQuiz(100, clsQuestion.enQuestionLevel.Mix, clsQuestion.enOperationType.mix,10));
         }
     }
 }

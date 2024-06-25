@@ -67,7 +67,7 @@ namespace Quizes_System
             // 
             this.lblNum1.AutoSize = true;
             this.lblNum1.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
-            this.lblNum1.Location = new System.Drawing.Point(69, 31);
+            this.lblNum1.Location = new System.Drawing.Point(50, 42);
             this.lblNum1.Name = "lblNum1";
             this.lblNum1.Size = new System.Drawing.Size(28, 37);
             this.lblNum1.TabIndex = 0;
@@ -77,7 +77,7 @@ namespace Quizes_System
             // 
             this.lblNum2.AutoSize = true;
             this.lblNum2.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
-            this.lblNum2.Location = new System.Drawing.Point(130, 31);
+            this.lblNum2.Location = new System.Drawing.Point(145, 42);
             this.lblNum2.Name = "lblNum2";
             this.lblNum2.Size = new System.Drawing.Size(32, 37);
             this.lblNum2.TabIndex = 1;
@@ -87,7 +87,7 @@ namespace Quizes_System
             // 
             this.lblOperation.AutoSize = true;
             this.lblOperation.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
-            this.lblOperation.Location = new System.Drawing.Point(103, 31);
+            this.lblOperation.Location = new System.Drawing.Point(103, 42);
             this.lblOperation.Name = "lblOperation";
             this.lblOperation.Size = new System.Drawing.Size(36, 37);
             this.lblOperation.TabIndex = 2;
@@ -97,7 +97,7 @@ namespace Quizes_System
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(157, 31);
+            this.label1.Location = new System.Drawing.Point(172, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 37);
             this.label1.TabIndex = 3;
@@ -105,13 +105,15 @@ namespace Quizes_System
             // 
             // lblQuestionNumber
             // 
-            this.lblQuestionNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.lblQuestionNumber.AutoSize = true;
+            this.lblQuestionNumber.BackColor = System.Drawing.Color.RoyalBlue;
             this.lblQuestionNumber.Font = new System.Drawing.Font("Segoe UI Semibold", 15.8F, System.Drawing.FontStyle.Bold);
+            this.lblQuestionNumber.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblQuestionNumber.Location = new System.Drawing.Point(-1, -1);
             this.lblQuestionNumber.Name = "lblQuestionNumber";
-            this.lblQuestionNumber.Size = new System.Drawing.Size(58, 41);
+            this.lblQuestionNumber.Size = new System.Drawing.Size(63, 37);
             this.lblQuestionNumber.TabIndex = 4;
-            this.lblQuestionNumber.Text = "Q1";
+            this.lblQuestionNumber.Text = "Q12";
             // 
             // guna2ColorTransition1
             // 
@@ -126,9 +128,9 @@ namespace Quizes_System
             this.gbOptions.Controls.Add(this.pOption3);
             this.gbOptions.Controls.Add(this.pOption2);
             this.gbOptions.Controls.Add(this.pOption1);
-            this.gbOptions.Location = new System.Drawing.Point(-1, 67);
+            this.gbOptions.Location = new System.Drawing.Point(-1, 78);
             this.gbOptions.Name = "gbOptions";
-            this.gbOptions.Size = new System.Drawing.Size(248, 210);
+            this.gbOptions.Size = new System.Drawing.Size(248, 211);
             this.gbOptions.TabIndex = 21;
             this.gbOptions.TabStop = false;
             // 
@@ -137,7 +139,7 @@ namespace Quizes_System
             this.pOption4.AutoRoundedCorners = true;
             this.pOption4.BackColor = System.Drawing.Color.Transparent;
             this.pOption4.BorderColor = System.Drawing.Color.Transparent;
-            this.pOption4.BorderRadius = 15;
+            this.pOption4.BorderRadius = 20;
             this.pOption4.BorderThickness = 2;
             this.pOption4.Controls.Add(this.rbOption4);
             this.pOption4.Controls.Add(this.pbOption4);
@@ -178,7 +180,7 @@ namespace Quizes_System
             this.pOption3.AutoRoundedCorners = true;
             this.pOption3.BackColor = System.Drawing.Color.Transparent;
             this.pOption3.BorderColor = System.Drawing.Color.Transparent;
-            this.pOption3.BorderRadius = 15;
+            this.pOption3.BorderRadius = 20;
             this.pOption3.BorderThickness = 2;
             this.pOption3.Controls.Add(this.rbOption3);
             this.pOption3.Controls.Add(this.pbOption3);
@@ -219,7 +221,7 @@ namespace Quizes_System
             this.pOption2.AutoRoundedCorners = true;
             this.pOption2.BackColor = System.Drawing.Color.Transparent;
             this.pOption2.BorderColor = System.Drawing.Color.Transparent;
-            this.pOption2.BorderRadius = 15;
+            this.pOption2.BorderRadius = 20;
             this.pOption2.BorderThickness = 2;
             this.pOption2.Controls.Add(this.rbOption2);
             this.pOption2.Controls.Add(this.pbOption2);
@@ -260,7 +262,7 @@ namespace Quizes_System
             this.pOption1.AutoRoundedCorners = true;
             this.pOption1.BackColor = System.Drawing.Color.Transparent;
             this.pOption1.BorderColor = System.Drawing.Color.Transparent;
-            this.pOption1.BorderRadius = 15;
+            this.pOption1.BorderRadius = 20;
             this.pOption1.BorderThickness = 2;
             this.pOption1.Controls.Add(this.rbOption1);
             this.pOption1.Controls.Add(this.pbOption1);
@@ -308,7 +310,7 @@ namespace Quizes_System
             this.Controls.Add(this.lblNum2);
             this.Controls.Add(this.lblNum1);
             this.Name = "ctrlQuiz";
-            this.Size = new System.Drawing.Size(242, 282);
+            this.Size = new System.Drawing.Size(245, 292);
             this.gbOptions.ResumeLayout(false);
             this.pOption4.ResumeLayout(false);
             this.pOption4.PerformLayout();
