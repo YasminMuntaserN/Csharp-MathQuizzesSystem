@@ -35,6 +35,11 @@ namespace Quizes_System
                 rbOption3.Text = options[2].ToString();
                 rbOption4.Text = options[3].ToString();
             }
+            _setCheckedItemFalse();
+        }
+
+        private void _setCheckedItemFalse()
+        {
             rbOption1.Checked = false;
             rbOption2.Checked = false;
             rbOption3.Checked = false;

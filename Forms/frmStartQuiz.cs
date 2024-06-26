@@ -1,4 +1,5 @@
-﻿using Quizes_System.Classes;
+﻿using Guna.UI.WinForms;
+using Quizes_System.Classes;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -23,7 +24,7 @@ namespace Quizes_System.Forms
 
         private bool _timerFinished = false;
 
-        public  int NumberOfCorrectAnswers = 0;
+        public int NumberOfCorrectAnswers = 0;
 
         public frmStartQuiz(int numberOfQuestions, clsQuestion.enQuestionLevel Level, clsQuestion.enOperationType operationType, int Time)
         {
@@ -59,7 +60,7 @@ namespace Quizes_System.Forms
 
         private void ResultMessageBox(int RightAnswer)
         {
-            if (RightAnswer > _GameInfo.NumberOfQuestions/2)
+            if (RightAnswer > _GameInfo.NumberOfQuestions / 2)
             {
                 MessageBox.Show($"Great! You got {RightAnswer} / {_GameInfo.NumberOfQuestions} , Well done !", "Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -74,11 +75,45 @@ namespace Quizes_System.Forms
 
             foreach (var kvp in Questions)
             {
-                if( kvp.Key.checkRightAnswer()) NumberOfCorrectAnswers++;
+                if (kvp.Key.checkRightAnswer()) NumberOfCorrectAnswers++;
             }
-            lblScoure.Text =NumberOfCorrectAnswers.ToString();
+
+            lblScoure.Text = NumberOfCorrectAnswers.ToString();
+
+            if (!(NumberOfCorrectAnswers > NumberOfCorrectAnswers / 2))
+            {
+                lblScoure.ForeColor = Color.Red;
+            }
 
             ResultMessageBox(NumberOfCorrectAnswers);
+
+            EndGame();
+
+        }
+
+        private void EndGame()
+        {
+            // Iterate over all controls in the FlowLayoutPanel
+            foreach (Control control in flpQuestions.Controls)
+            {
+                if (control is ctrlQuiz)
+                {
+                    // Disable all radio buttons in the panels within the QuestionControl
+                    foreach (Control panel in control.Controls)
+                    {
+                        if (panel is Panel)
+                        {
+                            foreach (Control radioButton in panel.Controls)
+                            {
+                                if (radioButton is RadioButton)
+                                {
+                                    radioButton.Enabled = false;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
 
         }
 
@@ -130,7 +165,7 @@ namespace Quizes_System.Forms
 
         private void btnReturnMaiMenu_Click(object sender, EventArgs e)
         {
-            if(btnFinishQuiz.Checked ||_timerFinished)
+            if (btnFinishQuiz.Checked || _timerFinished)
             {
                 frmMainMenu frmMainMenu = new frmMainMenu();
                 frmMainMenu.Show();

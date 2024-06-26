@@ -37,7 +37,6 @@ namespace Quizes_System
             this.lblOperation = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblQuestionNumber = new System.Windows.Forms.Label();
-            this.gbOptions = new System.Windows.Forms.GroupBox();
             this.pOption4 = new Guna.UI2.WinForms.Guna2Panel();
             this.rbOption4 = new System.Windows.Forms.RadioButton();
             this.pbOption4 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -50,7 +49,6 @@ namespace Quizes_System
             this.pOption1 = new Guna.UI2.WinForms.Guna2Panel();
             this.rbOption1 = new System.Windows.Forms.RadioButton();
             this.pbOption1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.gbOptions.SuspendLayout();
             this.pOption4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbOption4)).BeginInit();
             this.pOption3.SuspendLayout();
@@ -113,18 +111,6 @@ namespace Quizes_System
             this.lblQuestionNumber.TabIndex = 4;
             this.lblQuestionNumber.Text = "Q12";
             // 
-            // gbOptions
-            // 
-            this.gbOptions.Controls.Add(this.pOption4);
-            this.gbOptions.Controls.Add(this.pOption3);
-            this.gbOptions.Controls.Add(this.pOption2);
-            this.gbOptions.Controls.Add(this.pOption1);
-            this.gbOptions.Location = new System.Drawing.Point(-1, 78);
-            this.gbOptions.Name = "gbOptions";
-            this.gbOptions.Size = new System.Drawing.Size(248, 211);
-            this.gbOptions.TabIndex = 21;
-            this.gbOptions.TabStop = false;
-            // 
             // pOption4
             // 
             this.pOption4.AutoRoundedCorners = true;
@@ -134,10 +120,10 @@ namespace Quizes_System
             this.pOption4.BorderThickness = 2;
             this.pOption4.Controls.Add(this.rbOption4);
             this.pOption4.Controls.Add(this.pbOption4);
-            this.pOption4.Location = new System.Drawing.Point(0, 149);
+            this.pOption4.Location = new System.Drawing.Point(3, 220);
             this.pOption4.Name = "pOption4";
             this.pOption4.Size = new System.Drawing.Size(244, 42);
-            this.pOption4.TabIndex = 24;
+            this.pOption4.TabIndex = 28;
             // 
             // rbOption4
             // 
@@ -175,10 +161,10 @@ namespace Quizes_System
             this.pOption3.BorderThickness = 2;
             this.pOption3.Controls.Add(this.rbOption3);
             this.pOption3.Controls.Add(this.pbOption3);
-            this.pOption3.Location = new System.Drawing.Point(0, 104);
+            this.pOption3.Location = new System.Drawing.Point(3, 175);
             this.pOption3.Name = "pOption3";
             this.pOption3.Size = new System.Drawing.Size(244, 42);
-            this.pOption3.TabIndex = 23;
+            this.pOption3.TabIndex = 27;
             // 
             // rbOption3
             // 
@@ -216,10 +202,10 @@ namespace Quizes_System
             this.pOption2.BorderThickness = 2;
             this.pOption2.Controls.Add(this.rbOption2);
             this.pOption2.Controls.Add(this.pbOption2);
-            this.pOption2.Location = new System.Drawing.Point(0, 56);
+            this.pOption2.Location = new System.Drawing.Point(3, 127);
             this.pOption2.Name = "pOption2";
             this.pOption2.Size = new System.Drawing.Size(244, 42);
-            this.pOption2.TabIndex = 22;
+            this.pOption2.TabIndex = 26;
             // 
             // rbOption2
             // 
@@ -257,20 +243,20 @@ namespace Quizes_System
             this.pOption1.BorderThickness = 2;
             this.pOption1.Controls.Add(this.rbOption1);
             this.pOption1.Controls.Add(this.pbOption1);
-            this.pOption1.Location = new System.Drawing.Point(0, 11);
+            this.pOption1.Location = new System.Drawing.Point(3, 82);
             this.pOption1.Name = "pOption1";
             this.pOption1.Size = new System.Drawing.Size(244, 42);
-            this.pOption1.TabIndex = 21;
+            this.pOption1.TabIndex = 25;
             // 
             // rbOption1
             // 
             this.rbOption1.AutoSize = true;
             this.rbOption1.BackColor = System.Drawing.Color.Transparent;
             this.rbOption1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbOption1.Location = new System.Drawing.Point(8, 4);
+            this.rbOption1.Location = new System.Drawing.Point(8, 3);
             this.rbOption1.Name = "rbOption1";
             this.rbOption1.Size = new System.Drawing.Size(118, 35);
-            this.rbOption1.TabIndex = 11;
+            this.rbOption1.TabIndex = 12;
             this.rbOption1.TabStop = true;
             this.rbOption1.Tag = "1";
             this.rbOption1.Text = "Option1";
@@ -294,7 +280,10 @@ namespace Quizes_System
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.gbOptions);
+            this.Controls.Add(this.pOption4);
+            this.Controls.Add(this.pOption3);
+            this.Controls.Add(this.pOption2);
+            this.Controls.Add(this.pOption1);
             this.Controls.Add(this.lblQuestionNumber);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblOperation);
@@ -302,7 +291,6 @@ namespace Quizes_System
             this.Controls.Add(this.lblNum1);
             this.Name = "ctrlQuiz";
             this.Size = new System.Drawing.Size(245, 292);
-            this.gbOptions.ResumeLayout(false);
             this.pOption4.ResumeLayout(false);
             this.pOption4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbOption4)).EndInit();
@@ -327,7 +315,6 @@ namespace Quizes_System
         private System.Windows.Forms.Label lblOperation;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblQuestionNumber;
-        private GroupBox gbOptions;
         private Guna.UI2.WinForms.Guna2Panel pOption4;
         private RadioButton rbOption4;
         private Guna.UI2.WinForms.Guna2CirclePictureBox pbOption4;
