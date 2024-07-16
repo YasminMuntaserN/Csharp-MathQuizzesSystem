@@ -23,4 +23,4 @@
 <li>Integrated Development Environment :Visual Studio</li>
 </ol>
 </br>
-<p>To see a demo of the project <a style="margin-left: 40px;" target="_blank" href="[https://drive.google.com/file/d/1Lk6KFITPT4BBUUGlwexn7bniF9l2tMiS/view?usp=sharing]">click here</a></p>
+<p>To see a demo of the project <a style="margin-left: 40px;" target="_blank" href="https://drive.google.com/file/d/1Lk6KFITPT4BBUUGlwexn7bniF9l2tMiS/view?usp=sharing">click here</a></p>
